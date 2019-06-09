@@ -5,10 +5,10 @@
  * @Fileencodeing UTF-8[dos]
  * @Requirements AutoHotkey (v1.0.46+ or v2.0-a+)
  * @Installation
- *   Use #Include %A_ScriptDir%\AhkImeHandler\IME.ahk or copy into your code
+ *   Use #Include %A_ScriptDir%\AhkImeManager\IME.ahk or copy into your code
  * @Links
  *   eamat(original) http://www6.atwiki.jp/eamat/
- *   Tuckn(forked) https://github.com/tuckn/AhkImeHandler
+ *   Tuckn(forked) https://github.com/tuckn/AhkImeManager
  * @Email tuckn333 <at> gmail <dot> com
  */
 
