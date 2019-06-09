@@ -8,7 +8,7 @@
  *   Use #Include %A_ScriptDir%\AhkImeHandler\IME.ahk or copy into your code
  * @Links
  *   eamat(original) http://www6.atwiki.jp/eamat/
- *   Tuckn(forked) https://github.com/tuckn
+ *   Tuckn(forked) https://github.com/tuckn/AhkImeHandler
  * @Email tuckn333 <at> gmail <dot> com
  */
 
@@ -26,10 +26,10 @@ class IME
   /**
    * @Method IsEnabling
    * @Description Check IME status whether enabling or disabling {{{
-   * @Link http://www6.atwiki.jp/eamat/pages/17.html
+   * @Syntax value := IME.IsEnabling([WinTitle])
    * @Param {String} [WinTitle="A"]
    * @Return {Number}  0: disableing, 1: enableing
-   * @Syntax value := IME.IsEnabling([WinTitle])
+   * @Link http://www6.atwiki.jp/eamat/pages/17.html
    */
   class IsEnabling extends IME.Functor
   {
@@ -56,12 +56,12 @@ class IME
   /**
    * @Method IsConverting
    * @Description Check IME status whether converting {{{
-   * @Link http://www6.atwiki.jp/eamat/pages/17.html
+   * @Syntax value := IME.IsConverting([WinTitle, ConvCls, CandCls])
    * @Param {String} [WinTitle="A"]
    * @Param {String} [ConvCls=""]
    * @Param {String} [CandCls=""]
    * @Return {Number}  1: Converting, 2: Have converting window, 0: Others
-   * @Syntax value := IME.IsConverting([WinTitle, ConvCls, CandCls])
+   * @Link http://www6.atwiki.jp/eamat/pages/17.html
    */
   class IsConverting extends IME.Functor
   {
@@ -107,10 +107,10 @@ class IME
   /**
    * @Method SwitchIME
    * @Description Switch IME status to enabled/disabled {{{
-   * @Link http://www6.atwiki.jp/eamat/pages/17.html
+   * @Syntax value := IME.SwitchIME(SetSts, [WinTitle])
    * @Param {String} [SetSts=0] 0:OFF, 1:ON
    * @Return {Number}  0: Success, other for non-success
-   * @Syntax value := IME.SwitchIME(SetSts, [WinTitle])
+   * @Link http://www6.atwiki.jp/eamat/pages/17.html
    */
   class SwitchIME extends IME.Functor
   {
@@ -137,10 +137,10 @@ class IME
   /**
    * @Method SwitchInsMode
    * @Description Switch IME Insert Mode {{{
-   * @Link https://autohotkey.com/board/topic/3430-how-to-switch-the-insert-key-reliably-to-insert-mode/
+   * @Syntax value := IME.SwitchInsMode([st])
    * @Param {String} st "ON":ON, "OFF":OFF, others:switch
    * @Return {Number}  0: Success, other for non-success
-   * @Syntax value := IME.SwitchInsMode([st])
+   * @Link https://autohotkey.com/board/topic/3430-how-to-switch-the-insert-key-reliably-to-insert-mode/
    */
   class SwitchInsMode extends IME.Functor
   {
