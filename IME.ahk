@@ -108,14 +108,20 @@ class IME
    * @Method SwitchIME
    * @Description Switch IME status to enabled/disabled {{{
    * @Syntax value := IME.SwitchIME(SetSts, [WinTitle])
-   * @Param {String} [SetSts=0] 0:OFF, 1:ON
+   * @Param {Number or String} [SetSts=0] 0/Off, 1/On
    * @Return {Number}  0: Success, other for non-success
    * @Link http://www6.atwiki.jp/eamat/pages/17.html
    */
   class SwitchIME extends IME.Functor
   {
-    Call(self, SetSts=0, WinTitle="A")
+    Call(self, SetSts:=0, WinTitle:="A")
     {
+      if (SetSts = "Off") {
+        SetSts := 0
+      } else if (SetSts = "On") {
+        SetSts := 1
+      }
+
       ControlGet, hwnd, HWND, , , %WinTitle%
 
       if (WinActive(WinTitle)) {
