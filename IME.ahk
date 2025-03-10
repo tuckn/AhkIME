@@ -9,12 +9,12 @@
  * @Links
  *   eamat(original) http://www6.atwiki.jp/eamat/
  *   Tuckn(forked) https://github.com/tuckn/AhkImeManager
- * @Email tuckn333+github@gmail.com
+ * @Email tuckn333@gmail.com
  */
 
 /**
  * @Class IME
- * @Discription The IME object contains methods for parsing IME
+ * @Description The IME object contains methods for parsing IME
  * @Methods
  *   IsEnabling(...) - Check IME status whether enabling or disabling
  *   IsConverting(...) - Check IME status whether converting

@@ -1,51 +1,51 @@
 ﻿#Include %A_ScriptDir%\..\IME.ahk
 
-MsgBox, Press [Ctrl] + [Shift] + [9], Run it. Exit to the tasktray icon.
+MsgBox, [Ctrl] + [Shift] + [9] でIME状態確認スクリプトを実行します。終了する場合はタスクトレイのアイコンを右クリックしてください。
 
 ^+9::
-  MsgBox, Let activate a your editor. Ready is OK.
+  MsgBox, IME状態を確認したいエディタやテキストボックスにフォーカスをセットしてください。準備ができたら「OK」をクリックしてください。
   Sleep, 1000
 
   if (IME.IsEnabling()) {
-    MsgBox, 1. Now IME enabling on the editor
+    MsgBox, 1. 現在、そのエディタではIMEが有効になっています。
   } else {
-    MsgBox, 1. Now IME disabling on the editor
+    MsgBox, 1. 現在、そのエディタではIMEは無効になっています。
   }
 
-  MsgBox, 2. AHK will be IME enabling. Ready is OK.
+  MsgBox, 2. AutoHotkeyでIMEを有効化します。準備ができたら「OK」をクリックしてください。
   Sleep, 1000
   IME.SwitchIME(1)
-  MsgBox, Finished IME enabled.
+  MsgBox, IMEの有効化が完了しました。
   Sleep, 1000
 
   if (IME.IsEnabling()) {
-    MsgBox, 3. Now IME enabling on the editor
+    MsgBox, 3. 現在、そのエディタではIMEが有効になっています。
   } else {
-    MsgBox, 3. Now IME disabling on the editor
+    MsgBox, 3. 現在、そのエディタではIMEは無効になっています。
   }
 
-  MsgBox, 4. AHK will be IME disabling. Ready is OK.
+  MsgBox, 4. AutoHotkeyでIMEを無効に切り替えます。準備ができたら「OK」をクリックしてください。
   Sleep, 1000
   IME.SwitchIME(0)
-  MsgBox, Finished IME disabled.
+  MsgBox, IMEの無効化が完了しました。
 
   if (IME.IsEnabling()) {
-    MsgBox, 5. Now IME enabling on the editor
+    MsgBox, 5. 現在、そのエディタではIMEが有効になっています。
   } else {
-    MsgBox, 5. Now IME disabling on the editor
+    MsgBox, 5. 現在、そのエディタではIMEは無効になっています。
   }
 
-  MsgBox, 6. AHK will be INS mode enabling. Ready is OK.
+  MsgBox, 6. AHKが挿入モード（INSモード）を「有効」に切り替えます。準備ができたら「OK」をクリックしてください。
   Sleep, 1000
   IME.SwitchInsMode("ON")
-  MsgBox, Finished INS mode enabled. Check your editor
+  MsgBox, INSモードの有効化が完了しました。エディタをご確認ください。
 
   Sleep, 3000
 
-  MsgBox, 7. AHK will be INS mode disbling. Ready is OK.
+  MsgBox, 7. AHKがINSモードを「無効」に切り替えます。準備ができたら「OK」をクリックしてください。
   Sleep, 1000
   IME.SwitchInsMode("OFF")
-  MsgBox, Finished INS mode disabled. Check your editor
+  MsgBox, INSモードの無効化が完了しました。エディタをご確認ください。
 
-  MsgBox, All Done
-  Return
+  MsgBox, 全ての処理が完了しました。
+Return
