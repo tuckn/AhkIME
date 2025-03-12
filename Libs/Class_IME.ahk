@@ -1,14 +1,13 @@
 ﻿/**
- * @Updated 2019/06/16
  * @Fileoverview IME handler for AutoHotkey
- * @Fileencodeing UTF-8[dos]
- * @Requirements AutoHotkey (v1.0.46+ or v2.0-a+)
+ * @Fileencoding UTF-8[dos]
+ * @Requirements AutoHotkey v1.1.x. Not confirmed to work on v2.0 or newer.
  * @Installation
- *   Use #Include %A_ScriptDir%\AhkImeManager\IME.ahk or copy into your code
+ *   Use #Include %A_ScriptDir%\AhkIME\Libs\Class_IME.ahk or copy into your code
  * @License MIT
  * @Links
  *   eamat(original) http://www6.atwiki.jp/eamat/
- *   Tuckn(forked) https://github.com/tuckn/AhkImeManager
+ *   Tuckn(forked) https://github.com/tuckn/AhkIME
  * @Email tuckn333@gmail.com
  */
 
